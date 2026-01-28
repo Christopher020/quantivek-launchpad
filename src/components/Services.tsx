@@ -1,35 +1,42 @@
-import { Globe, Smartphone, Code, Zap, Shield, TrendingUp } from "lucide-react";
+import { Globe, Smartphone, Code, Zap, Shield, TrendingUp, ArrowRight } from "lucide-react";
 import { ScrollAnimation } from "./ScrollAnimation";
+import { Link } from "react-router-dom";
 
 const services = [
   {
     icon: Globe,
     title: "Web Applications",
+    slug: "web-applications",
     description: "Custom web apps built with modern technologies that scale with your business and deliver exceptional user experiences.",
   },
   {
     icon: Smartphone,
     title: "Mobile Apps",
+    slug: "mobile-apps",
     description: "Native and cross-platform mobile applications that engage users and drive conversions on iOS and Android.",
   },
   {
     icon: Code,
     title: "Custom Software",
+    slug: "custom-software",
     description: "Tailored software solutions designed to automate processes and solve your unique business challenges.",
   },
   {
     icon: Zap,
     title: "API Development",
+    slug: "api-development",
     description: "Robust and scalable APIs that connect your systems and enable seamless data flow across platforms.",
   },
   {
     icon: Shield,
     title: "Cloud Solutions",
+    slug: "cloud-solutions",
     description: "Secure cloud infrastructure and deployment strategies that ensure reliability and performance at scale.",
   },
   {
     icon: TrendingUp,
     title: "Digital Strategy",
+    slug: "digital-strategy",
     description: "Strategic consulting to help you leverage technology for maximum business impact and competitive advantage.",
   },
 ];
@@ -51,17 +58,23 @@ export function Services() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <ScrollAnimation key={service.title} delay={index * 0.1} direction="up">
-              <div className="group bg-card rounded-2xl p-8 border border-border hover:border-accent/30 transition-all duration-300 card-hover h-full">
-                <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-                  <service.icon className="w-7 h-7 text-accent" />
+              <Link to={`/services/${service.slug}`} className="block h-full">
+                <div className="group bg-card rounded-2xl p-8 border border-border hover:border-accent/30 transition-all duration-300 card-hover h-full">
+                  <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+                    <service.icon className="w-7 h-7 text-accent" />
+                  </div>
+                  <h3 className="font-display text-xl font-semibold text-foreground mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    {service.description}
+                  </p>
+                  <div className="flex items-center text-accent font-medium group-hover:gap-2 transition-all">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
-                <h3 className="font-display text-xl font-semibold text-foreground mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
+              </Link>
             </ScrollAnimation>
           ))}
         </div>
