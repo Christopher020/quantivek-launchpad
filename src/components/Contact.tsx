@@ -39,7 +39,7 @@ export function Contact() {
     }));
   };
 
-  const whatsappNumber = "2348012345678"; // Replace with actual number
+  const whatsappNumber = "2347012528929"; // Replace with actual number
   const whatsappMessage = encodeURIComponent("Hi Quantivek! I'm interested in discussing a project.");
 
   return (
