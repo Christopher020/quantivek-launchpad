@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
+import quantivekLogo from "@/assets/quantivek-logo.png";
 
 const footerLinks = [
   {
@@ -35,12 +36,11 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <a href="#" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-                <span className="font-display font-bold text-accent-foreground text-xl">Q</span>
-              </div>
-              <span className="font-display font-bold text-xl text-foreground">
-                Quantivek
-              </span>
+              <img 
+                src={quantivekLogo} 
+                alt="Quantivek Logo" 
+                className="h-10 w-auto"
+              />
             </a>
             <p className="text-muted-foreground max-w-sm mb-6">
               Building high-converting software solutions for startups and SMEs. Let's transform your digital vision into reality.

@@ -3,6 +3,8 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
+import quantivekLogo from "@/assets/quantivek-logo.png";
 
 const navLinks = [
   { name: "Services", href: "#services" },
@@ -37,14 +39,13 @@ export function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-              <span className="font-display font-bold text-accent-foreground text-xl">Q</span>
-            </div>
-            <span className="font-display font-bold text-xl text-foreground">
-              Quantivek
-            </span>
-          </a>
+          <Link to="/" className="flex items-center gap-2">
+            <img 
+              src={quantivekLogo} 
+              alt="Quantivek Logo" 
+              className="h-10 w-auto"
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
