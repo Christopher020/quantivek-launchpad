@@ -151,8 +151,8 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground">Email Us</h4>
-                    <a href="mailto:hello@quantivek.com" className="text-muted-foreground hover:text-accent transition-colors">
-                      hello@quantivek.com
+                    <a href="mailto:c.uchenna@quantivek.com" className="text-muted-foreground hover:text-accent transition-colors">
+                      c.uchenna@quantivek.com
                     </a>
                   </div>
                 </div>
@@ -180,7 +180,7 @@ export function Contact() {
                   variant="outline"
                   className="font-semibold border-2 hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all"
                 >
-                  <a href="mailto:hello@quantivek.com?subject=Free Consultation Request">
+                  <a href="mailto:c.uchenna@quantivek.com?subject=Free Consultation Request">
                     Schedule Now
                   </a>
                 </Button>
