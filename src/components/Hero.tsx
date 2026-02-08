@@ -39,11 +39,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6"
+            className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6"
           >
             We Build{" "}
             <span className="gradient-text">High-Converting</span>{" "}
-            Software for Startups & SMEs
+            software and operate scalable SaaS products for startups and SMEs.
           </motion.h1>
 
           {/* Subheadline */}
@@ -53,7 +53,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
           >
-            Custom web applications, mobile apps, and digital solutions that transform your vision into reality and accelerate your business growth.
+            Custom web applications, mobile apps, and digital solutions that help businesses grow, automate operations, and scale efficiently.
           </motion.p>
 
           {/* CTAs */}

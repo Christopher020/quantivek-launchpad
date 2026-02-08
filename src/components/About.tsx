@@ -18,17 +18,17 @@ export function About() {
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">About Quantivek</span>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6">
               Your Partner in{" "}
-              <span className="gradient-text">Digital Innovation</span>
+              <span className="gradient-text">Digital Innovation and SaaS Solutions</span>
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Quantivek is a forward-thinking software agency dedicated to helping startups and SMEs achieve their digital ambitions. We combine technical excellence with a deep understanding of business needs to deliver solutions that truly make a difference.
+                Quantivek Global is a forward-thinking software agency dedicated to helping startups and SMEs achieve their digital ambitions. We specialize in custom software development, web applications, mobile apps, and proprietary SaaS products that transform ideas into scalable, high-performing solutions.
               </p>
               <p>
-                Our team of skilled developers, designers, and strategists work collaboratively to transform your ideas into powerful digital products. We don't just build software—we build partnerships that drive sustainable growth.
+                Our team of skilled developers, designers, and strategists work collaboratively to deliver innovative digital products. We don’t just build software—we build partnerships that drive sustainable growth and business success.
               </p>
               <p>
-                From initial concept to launch and beyond, we're committed to your success. Our agile approach ensures transparency, flexibility, and results at every stage of your project.
+                From initial concept to launch and beyond, we ensure transparency, flexibility, and measurable results at every stage of your projects and SaaS offerings.
               </p>
             </div>
           </ScrollAnimation>
