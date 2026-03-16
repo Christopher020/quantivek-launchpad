@@ -133,7 +133,7 @@ export function Contact() {
                   className="bg-[#25D366] hover:bg-[#22c55e] text-white font-semibold px-6 py-6 rounded-xl w-full sm:w-auto"
                 >
                   <a
-                    href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                    href={`https://wa.me/${+2347012528929}?text=${"Hi, I would love to inquire about "}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -151,8 +151,8 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground">Email Us</h4>
-                    <a href="mailto:c.uchenna@quantivek.com" className="text-muted-foreground hover:text-accent transition-colors">
-                      c.uchenna@quantivek.com
+                    <a href="mailto:info@quantivek.com" className="text-muted-foreground hover:text-accent transition-colors">
+                      info@quantivek.com
                     </a>
                   </div>
                 </div>
