@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Plus, Pencil, Trash2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { ImageUpload } from "./ImageUpload";
 import type { Json } from "@/integrations/supabase/types";
 
 interface ResultItem {
@@ -130,7 +131,14 @@ export function AdminProjects() {
             <DialogHeader>
               <DialogTitle className="font-display">{editing ? "Edit Project" : "New Project"}</DialogTitle>
             </DialogHeader>
-            <form onSubmit={(e) => { e.preventDefault(); upsertMutation.mutate(form); }} className="space-y-4">
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              if (!form.image_url) {
+                toast({ title: "Image required", description: "Please upload at least one image for the project", variant: "destructive" });
+                return;
+              }
+              upsertMutation.mutate(form);
+            }} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label>Title</Label>
@@ -149,10 +157,13 @@ export function AdminProjects() {
                 <Label>Description</Label>
                 <Textarea value={form.description} onChange={e => setForm(f => ({ ...f, description: e.target.value }))} rows={3} />
               </div>
-              <div className="space-y-2">
-                <Label>Image URL</Label>
-                <Input value={form.image_url} onChange={e => setForm(f => ({ ...f, image_url: e.target.value }))} placeholder="https://..." />
-              </div>
+              <ImageUpload
+                label="Project Image"
+                value={form.image_url}
+                onChange={(url) => setForm(f => ({ ...f, image_url: url }))}
+                required
+                folder="projects"
+              />
               <div className="space-y-2">
                 <Label>Tags (comma separated)</Label>
                 <Input value={form.tags} onChange={e => setForm(f => ({ ...f, tags: e.target.value }))} placeholder="React, Node.js, AWS" />

@@ -10,6 +10,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Plus, Pencil, Trash2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { ImageUpload } from "./ImageUpload";
 
 interface BlogForm {
   title: string;
@@ -112,7 +113,14 @@ export function AdminBlogPosts() {
             <DialogHeader>
               <DialogTitle className="font-display">{editing ? "Edit Post" : "New Post"}</DialogTitle>
             </DialogHeader>
-            <form onSubmit={(e) => { e.preventDefault(); upsertMutation.mutate(form); }} className="space-y-4">
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              if (!form.image_url) {
+                toast({ title: "Image required", description: "Please upload a featured image for the post", variant: "destructive" });
+                return;
+              }
+              upsertMutation.mutate(form);
+            }} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label>Title</Label>
@@ -131,10 +139,13 @@ export function AdminBlogPosts() {
                 <Label>Content</Label>
                 <Textarea value={form.content} onChange={e => setForm(f => ({ ...f, content: e.target.value }))} rows={10} placeholder="Full blog post content..." />
               </div>
-              <div className="space-y-2">
-                <Label>Image URL</Label>
-                <Input value={form.image_url} onChange={e => setForm(f => ({ ...f, image_url: e.target.value }))} placeholder="https://..." />
-              </div>
+              <ImageUpload
+                label="Featured Image"
+                value={form.image_url}
+                onChange={(url) => setForm(f => ({ ...f, image_url: url }))}
+                required
+                folder="blog"
+              />
               <div className="space-y-2">
                 <Label>Tags (comma separated)</Label>
                 <Input value={form.tags} onChange={e => setForm(f => ({ ...f, tags: e.target.value }))} placeholder="Tech, Startup, Design" />
