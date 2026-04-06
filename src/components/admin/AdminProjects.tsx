@@ -131,7 +131,14 @@ export function AdminProjects() {
             <DialogHeader>
               <DialogTitle className="font-display">{editing ? "Edit Project" : "New Project"}</DialogTitle>
             </DialogHeader>
-            <form onSubmit={(e) => { e.preventDefault(); upsertMutation.mutate(form); }} className="space-y-4">
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              if (!form.image_url) {
+                toast({ title: "Image required", description: "Please upload at least one image for the project", variant: "destructive" });
+                return;
+              }
+              upsertMutation.mutate(form);
+            }} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label>Title</Label>

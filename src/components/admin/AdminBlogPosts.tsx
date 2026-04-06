@@ -113,7 +113,14 @@ export function AdminBlogPosts() {
             <DialogHeader>
               <DialogTitle className="font-display">{editing ? "Edit Post" : "New Post"}</DialogTitle>
             </DialogHeader>
-            <form onSubmit={(e) => { e.preventDefault(); upsertMutation.mutate(form); }} className="space-y-4">
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              if (!form.image_url) {
+                toast({ title: "Image required", description: "Please upload a featured image for the post", variant: "destructive" });
+                return;
+              }
+              upsertMutation.mutate(form);
+            }} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label>Title</Label>
