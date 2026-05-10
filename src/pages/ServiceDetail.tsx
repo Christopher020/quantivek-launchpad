@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
+import { SEO } from "@/components/SEO";
 
 const servicesData = {
   "web-applications": {
@@ -204,6 +205,11 @@ export default function ServiceDetail() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={`${service.title} | Quantivek`}
+        description={service.description.slice(0, 155)}
+        canonical={`/services/${slug}`}
+      />
       <Navbar />
 
       {/* Hero Section */}

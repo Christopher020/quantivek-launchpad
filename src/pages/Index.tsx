@@ -7,10 +7,16 @@ import { About } from "@/components/About";
 import { NewsletterSubscribe } from "@/components/NewsletterSubscribe";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Quantivek | High-Converting Software for Startups & SMEs"
+        description="Quantivek builds custom web applications, mobile apps, and scalable SaaS products for startups and SMEs. Transform your vision and accelerate growth."
+        canonical="/"
+      />
       <Navbar />
       <Hero />
       <Services />
