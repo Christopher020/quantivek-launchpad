@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Calendar } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
@@ -25,6 +26,24 @@ export default function BlogPost() {
 
   return (
     <div className="min-h-screen bg-background">
+      {post && (
+        <SEO
+          title={`${post.title} | Quantivek Blog`}
+          description={post.excerpt || post.title}
+          canonical={`/blog/${post.slug}`}
+          image={post.image_url || undefined}
+          type="article"
+          jsonLd={{
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.title,
+            description: post.excerpt || post.title,
+            image: post.image_url || undefined,
+            datePublished: post.created_at,
+            author: { "@type": "Organization", name: "Quantivek" },
+          }}
+        />
+      )}
       <Navbar />
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
