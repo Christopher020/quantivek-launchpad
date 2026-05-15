@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import quantivekLogo from "@/assets/quantivek-logo.png";
+import { SEO } from "@/components/SEO";
 
 export default function AdminLogin() {
   const [email, setEmail] = useState("");
