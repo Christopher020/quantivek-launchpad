@@ -16,6 +16,24 @@ const Index = () => {
         title="Quantivek | High-Converting Software for Startups & SMEs"
         description="Quantivek builds custom web applications, mobile apps, and scalable SaaS products for startups and SMEs. Transform your vision and accelerate growth."
         canonical="/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "Quantivek",
+          url: "https://www.quantivek.com",
+          description:
+            "Quantivek builds high-converting web, mobile, and SaaS software for startups and SMEs.",
+          areaServed: "NG",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Lagos",
+            addressCountry: "NG",
+          },
+          sameAs: [
+            "https://twitter.com/quantivek",
+            "https://linkedin.com/company/quantivek",
+          ],
+        }}
       />
       <Navbar />
       <Hero />
