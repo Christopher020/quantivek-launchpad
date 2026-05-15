@@ -36,6 +36,12 @@ export default function AdminLogin() {
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-4">
+      <SEO
+        title="Admin Login | Quantivek"
+        description="Secure sign-in for Quantivek staff to manage projects, posts, and subscribers."
+        canonical="/admin/login"
+        noIndex
+      />
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <img src={quantivekLogo} alt="Quantivek" className="h-10 w-auto mx-auto mb-4" />
