@@ -27,6 +27,12 @@ export default function AdminDashboard() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Admin Dashboard | Quantivek"
+        description="Internal Quantivek dashboard for managing projects, blog posts, and newsletter subscribers."
+        canonical="/admin"
+        noIndex
+      />
       <header className="border-b border-border bg-card">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
