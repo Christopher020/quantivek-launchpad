@@ -8,6 +8,7 @@ import { AdminProjects } from "@/components/admin/AdminProjects";
 import { AdminBlogPosts } from "@/components/admin/AdminBlogPosts";
 import { AdminSubscribers } from "@/components/admin/AdminSubscribers";
 import quantivekLogo from "@/assets/quantivek-logo.png";
+import { SEO } from "@/components/SEO";
 
 export default function AdminDashboard() {
   const { user, isAdmin, loading, signOut } = useAuth();
