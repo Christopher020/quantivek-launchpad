@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import quantivekLogo from "@/assets/quantivek-logo.png";
+import { SEO } from "@/components/SEO";
 
 export default function AdminLogin() {
   const [email, setEmail] = useState("");
@@ -35,6 +36,12 @@ export default function AdminLogin() {
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-4">
+      <SEO
+        title="Admin Login | Quantivek"
+        description="Secure sign-in for Quantivek staff to manage projects, posts, and subscribers."
+        canonical="/admin/login"
+        noIndex
+      />
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <img src={quantivekLogo} alt="Quantivek" className="h-10 w-auto mx-auto mb-4" />

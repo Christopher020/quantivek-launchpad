@@ -209,6 +209,19 @@ export default function ServiceDetail() {
         title={`${service.title} | Quantivek`}
         description={service.description.slice(0, 155)}
         canonical={`/services/${slug}`}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: service.title,
+          description: service.description,
+          provider: {
+            "@type": "Organization",
+            name: "Quantivek",
+            url: "https://www.quantivek.com",
+          },
+          areaServed: "NG",
+          url: `https://www.quantivek.com/services/${slug}`,
+        }}
       />
       <Navbar />
 

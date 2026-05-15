@@ -1,0 +1,23 @@
+# Quantivek
+
+> Quantivek is a Lagos-based software agency building high-converting web applications, mobile apps, and scalable SaaS products for startups and SMEs.
+
+## Pages
+
+- [Home](/): Quantivek overview, services, projects, and contact.
+
+## Services
+
+- [Web Applications](/services/web-applications): Custom dashboards, e-commerce, and PWAs built with modern stacks.
+- [Mobile Apps](/services/mobile-apps): Native and cross-platform iOS/Android apps.
+- [Custom Software](/services/custom-software): Tailored business automation, CRMs, and ERPs.
+- [API Development](/services/api-development): REST and GraphQL APIs, gateways, and microservices.
+- [Cloud Solutions](/services/cloud-solutions): Cloud migration, IaC, Kubernetes, and CI/CD.
+- [Digital Strategy](/services/digital-strategy): Roadmaps, product strategy, and technical due diligence.
+
+## Blog
+
+- [Best Software Development Companies in Nigeria (2026)](/blog/Best%20Software%20Development%20Companies%20in%20Nigeria%20%282026%29): Industry roundup of top Nigerian software firms.
+- [Nigerian Startup Custom Website 2025](/blog/nigerian-startup-custom-website-2025): Why Nigerian startups need custom websites.
+- [Building Scalable Applications: Lessons](/blog/building-scalable-applications-lessons): Engineering lessons on scalable apps.
+- [Choosing the Right Tech Stack](/blog/choosing-right-tech-stack-guide): How to pick a tech stack.
