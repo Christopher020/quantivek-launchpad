@@ -59,9 +59,9 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.6 }}
           className="max-w-xl text-muted-foreground text-sm md:text-base font-light leading-relaxed tracking-wide mb-16 md:mb-20"
         >
-          A Lagos-based software agency operating at the intersection of engineering and strategic growth.
+          A Lagos-based technology company operating at the intersection of software engineering and IT infrastructure.
           We build, scale, and operate <span className="text-foreground">high-converting</span> SaaS products
-          for Nigerian startups and SMEs with long-term intent.
+          and end-to-end IT infrastructure solutions for Nigerian startups, SMEs, schools, and enterprises.
         </motion.p>
 
         {/* Stats */}
@@ -74,7 +74,7 @@ export function Hero() {
           {[
             { value: "2021", label: "Founded" },
             { value: "Lagos", label: "Headquarters" },
-            { value: "SaaS", label: "Specialty" },
+            { value: "SaaS & IT Infrastructure", label: "Specialty" },
             { value: "30+", label: "Projects Shipped" },
           ].map((stat) => (
             <div key={stat.label} className="flex flex-col items-center">

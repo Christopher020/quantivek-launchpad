@@ -18,6 +18,11 @@ const footerLinks = [
       { name: "Mobile Apps", href: "#services" },
       { name: "Custom Software", href: "#services" },
       { name: "Cloud Solutions", href: "#services" },
+      { name: "IT Infrastructure", href: "#services" },
+      { name: "CCTV & Security", href: "#services" },
+      { name: "Access Control", href: "#services" },
+      { name: "Computer Lab Setup", href: "#services" },
+      { name: "Starlink Installation", href: "#services" },
     ],
   },
 ];

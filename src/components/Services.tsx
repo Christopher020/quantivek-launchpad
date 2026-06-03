@@ -1,4 +1,4 @@
-import { Globe, Smartphone, Code, Zap, Shield, TrendingUp, ArrowRight } from "lucide-react";
+import { Globe, Smartphone, Code, Zap, Shield, TrendingUp, ArrowRight, Server, Camera, Lock, Monitor, Wifi } from "lucide-react";
 import { ScrollAnimation } from "./ScrollAnimation";
 import { Link } from "react-router-dom";
 
@@ -38,6 +38,36 @@ const services = [
     title: "Digital Strategy",
     slug: "digital-strategy",
     description: "Strategic consulting to help you leverage technology for maximum business impact and competitive advantage.",
+  },
+  {
+    icon: Server,
+    title: "IT Infrastructure Setup",
+    slug: "it-infrastructure-setup",
+    description: "End-to-end server room design, rack installation, structured cabling, UPS and power management for businesses and enterprises.",
+  },
+  {
+    icon: Camera,
+    title: "CCTV & Security Systems",
+    slug: "cctv-security-systems",
+    description: "Professional IP camera installation, surveillance system design, and security monitoring setup for offices, homes, and institutions.",
+  },
+  {
+    icon: Lock,
+    title: "Access Control Systems",
+    slug: "access-control-systems",
+    description: "Biometric, card-based, and PIN access control installation to secure your facilities and manage entry with precision.",
+  },
+  {
+    icon: Monitor,
+    title: "Computer Lab Setup",
+    slug: "computer-lab-setup",
+    description: "Full computer lab design and deployment for schools, training centers, and businesses — from hardware procurement to software configuration.",
+  },
+  {
+    icon: Wifi,
+    title: "Starlink Installation",
+    slug: "starlink-installation",
+    description: "Residential and commercial Starlink satellite internet installation and configuration for fast, reliable connectivity anywhere in Nigeria.",
   },
 ];
 

@@ -1,6 +1,6 @@
 # Quantivek
 
-> Quantivek is a Lagos-based software agency building high-converting web applications, mobile apps, and scalable SaaS products for startups and SMEs.
+> Quantivek is a Lagos-based technology company building high-converting web applications, mobile apps, scalable SaaS products, and end-to-end IT infrastructure solutions for startups, SMEs, schools, and enterprises.
 
 ## Pages
 

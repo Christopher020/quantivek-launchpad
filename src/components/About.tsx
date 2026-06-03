@@ -22,7 +22,7 @@ export function About() {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Quantivek Global is a forward-thinking software agency dedicated to helping startups and SMEs achieve their digital ambitions. We specialize in custom software development, web applications, mobile apps, and proprietary SaaS products that transform ideas into scalable, high-performing solutions.
+                Quantivek Global is a forward-thinking technology company dedicated to helping startups and SMEs achieve their digital ambitions. We specialize in custom software development, web applications, mobile apps, and proprietary SaaS products that transform ideas into scalable, high-performing solutions.
               </p>
               <p>
                 Our team of skilled developers, designers, and strategists work collaboratively to deliver innovative digital products. We don’t just build software—we build partnerships that drive sustainable growth and business success.
