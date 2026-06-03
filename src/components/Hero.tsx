@@ -1,104 +1,109 @@
-import { ArrowRight, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--accent)/0.1),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,hsl(var(--primary)/0.05),transparent_50%)]" />
-      
-      {/* Floating elements */}
-      <motion.div
-        animate={{ y: [0, -20, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 left-[10%] w-20 h-20 rounded-full bg-accent/10 blur-2xl"
-      />
-      <motion.div
-        animate={{ y: [0, 20, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-        className="absolute bottom-1/4 right-[15%] w-32 h-32 rounded-full bg-primary/10 blur-3xl"
-      />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-20 px-6">
+      {/* Background depth */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--accent)/0.08),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,transparent,hsl(var(--background)))]" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-8"
-          >
-            <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium text-accent">Software Agency for Growth</span>
-          </motion.div>
+      <div className="relative z-10 max-w-5xl w-full flex flex-col items-center text-center">
+        {/* Eyebrow Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 md:mb-16"
+        >
+          <span className="px-4 py-1.5 border border-border rounded-full text-[10px] tracking-[0.25em] text-muted-foreground uppercase">
+            Est. 2021 <span className="mx-2 text-accent/70">·</span> Incorporated in Nigeria
+          </span>
+        </motion.div>
 
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6"
-          >
-            We Build{" "}
-            <span className="gradient-text">High-Converting</span>{" "}
-            software and operate scalable SaaS products for startups and SMEs.
-          </motion.h1>
+        {/* Monogram */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="mb-8 md:mb-10"
+        >
+          <svg width="44" height="44" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-foreground">
+            <path d="M20 5C11.7157 5 5 11.7157 5 20C5 28.2843 11.7157 35 20 35C23.5 35 26.75 33.75 29.25 31.75L33 35.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M20 12V28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <circle cx="20" cy="20" r="2.5" fill="hsl(var(--accent))" />
+          </svg>
+        </motion.div>
 
-          {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
-          >
-            Custom web applications, mobile apps, and digital solutions that help businesses grow, automate operations, and scale efficiently.
-          </motion.p>
+        {/* Wordmark */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.2 }}
+          className="font-serif font-light tracking-tight leading-[0.95] text-foreground select-none mb-8 md:mb-10 text-6xl sm:text-7xl md:text-8xl lg:text-[9.5rem]"
+        >
+          Quantivek
+        </motion.h1>
 
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            <Button
-              asChild
-              size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg rounded-xl glow-effect"
-            >
-              <a href="#contact">
-                Book a Free Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="font-semibold px-8 py-6 text-lg rounded-xl border-2"
-            >
-              <a href="#work">View Our Work</a>
-            </Button>
-          </motion.div>
+        {/* Thin Divider */}
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: 64 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="h-px bg-border mb-8 md:mb-10"
+        />
 
-          {/* Trust indicators */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-16 pt-8 border-t border-border"
-          >
-            <p className="text-sm text-muted-foreground mb-4">Trusted by innovative companies</p>
-            <div className="flex items-center justify-center gap-8 flex-wrap opacity-60">
-              <div className="font-display font-semibold text-xl text-foreground">TechStart</div>
-              <div className="font-display font-semibold text-xl text-foreground">GrowthLabs</div>
-              <div className="font-display font-semibold text-xl text-foreground">ScaleUp</div>
-              <div className="font-display font-semibold text-xl text-foreground">InnovateCo</div>
+        {/* Sub-paragraph */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.6 }}
+          className="max-w-xl text-muted-foreground text-sm md:text-base font-light leading-relaxed tracking-wide mb-16 md:mb-20"
+        >
+          A Lagos-based software agency operating at the intersection of engineering and strategic growth.
+          We build, scale, and operate <span className="text-foreground">high-converting</span> SaaS products
+          for Nigerian startups and SMEs with long-term intent.
+        </motion.p>
+
+        {/* Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-10 mb-16 md:mb-20 w-full max-w-3xl border-y border-border py-10"
+        >
+          {[
+            { value: "2021", label: "Founded" },
+            { value: "Lagos", label: "Headquarters" },
+            { value: "SaaS", label: "Specialty" },
+            { value: "30+", label: "Projects Shipped" },
+          ].map((stat) => (
+            <div key={stat.label} className="flex flex-col items-center">
+              <span className="text-2xl md:text-3xl font-serif text-foreground mb-2">{stat.value}</span>
+              <span className="text-[9px] tracking-[0.2em] text-muted-foreground uppercase">{stat.label}</span>
             </div>
-          </motion.div>
-        </div>
+          ))}
+        </motion.div>
+
+        {/* CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.85 }}
+          className="flex flex-col sm:flex-row gap-4"
+        >
+          <a
+            href="#contact"
+            className="px-10 py-4 bg-foreground text-background text-[11px] font-semibold tracking-[0.18em] uppercase transition-all hover:opacity-90"
+          >
+            Book a Free 30-Minute Consultation
+          </a>
+          <a
+            href="#work"
+            className="px-10 py-4 border border-border text-foreground text-[11px] font-semibold tracking-[0.18em] uppercase transition-all hover:bg-foreground hover:text-background"
+          >
+            View Our Work
+          </a>
+        </motion.div>
       </div>
     </section>
   );
