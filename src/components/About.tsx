@@ -25,10 +25,7 @@ export function About() {
                 Quantivek Global is a forward-thinking technology agency dedicated to helping startups, SMEs, schools, and enterprises achieve their digital and infrastructure ambitions. We specialize in custom software development, SaaS products, and full IT infrastructure setup — from server rooms and computer labs to CCTV, access control, and Starlink installation.
               </p>
               <p>
-                Our team of skilled developers, designers, and strategists work collaboratively to deliver innovative digital products. We don’t just build software—we build partnerships that drive sustainable growth and business success.
-              </p>
-              <p>
-                From initial concept to launch and beyond, we ensure transparency, flexibility, and measurable results at every stage of your projects and SaaS offerings.
+                From concept to completion, we deliver technology that works in the real world.
               </p>
             </div>
           </ScrollAnimation>
