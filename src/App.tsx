@@ -11,6 +11,8 @@ import ServiceDetail from "./pages/ServiceDetail";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import BlogPost from "./pages/BlogPost";
+import ScrollToTop from "./components/ScrollToTop";
+import { BackToTop } from "./components/BackToTop";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +24,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services/:slug" element={<ServiceDetail />} />
@@ -31,6 +34,7 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <BackToTop />
         </BrowserRouter>
       </TooltipProvider>
     </AuthProvider>
