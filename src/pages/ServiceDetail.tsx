@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, Check, ArrowRight } from "lucide-react";
 import { Globe, Smartphone, Code, Zap, Shield, TrendingUp, Server, Camera, Lock, Monitor, Wifi, Network } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -306,7 +306,17 @@ const servicesData = {
 
 export default function ServiceDetail() {
   const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
   const service = slug ? servicesData[slug as keyof typeof servicesData] : null;
+
+  const handleBack = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate("/#services");
+    }
+  };
 
   if (!service) {
     return (
@@ -351,13 +361,14 @@ export default function ServiceDetail() {
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <ScrollAnimation>
-            <Link
-              to="/#services"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
+            <a
+              href="/#services"
+              onClick={handleBack}
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Services
-            </Link>
+            </a>
           </ScrollAnimation>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
