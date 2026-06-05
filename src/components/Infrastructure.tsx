@@ -1,62 +1,62 @@
-import { Globe, Smartphone, Code, Zap, Shield, TrendingUp, ArrowRight } from "lucide-react";
+import { Server, Camera, Lock, Monitor, Wifi, Network, ArrowRight } from "lucide-react";
 import { ScrollAnimation } from "./ScrollAnimation";
 import { Link } from "react-router-dom";
 
-const services = [
+const infrastructure = [
   {
-    icon: Globe,
-    title: "Web Applications",
-    slug: "web-applications",
-    description: "Custom web apps built with modern technologies that scale with your business and deliver exceptional user experiences.",
+    icon: Server,
+    title: "Server Room Setup",
+    slug: "server-room-setup",
+    description: "Rack installation, structured cabling, UPS, cooling, and remote monitoring for businesses and enterprises.",
   },
   {
-    icon: Smartphone,
-    title: "Mobile Apps",
-    slug: "mobile-apps",
-    description: "Native and cross-platform mobile applications that engage users and drive conversions on iOS and Android.",
+    icon: Camera,
+    title: "CCTV & Surveillance",
+    slug: "cctv-surveillance",
+    description: "IP camera installation, full-coverage surveillance design, and remote viewing setup for offices and residences.",
   },
   {
-    icon: Code,
-    title: "Custom Software",
-    slug: "custom-software",
-    description: "Tailored software solutions designed to automate processes and solve your unique business challenges.",
+    icon: Lock,
+    title: "Access Control",
+    slug: "access-control",
+    description: "Biometric, card-based, and PIN access installation to secure entrances and manage staff movement.",
   },
   {
-    icon: Zap,
-    title: "API Development",
-    slug: "api-development",
-    description: "Robust and scalable APIs that connect your systems and enable seamless data flow across platforms.",
+    icon: Monitor,
+    title: "Computer Lab Setup",
+    slug: "computer-lab-setup",
+    description: "Full workstation deployment, networking, and software configuration for schools, CBT centers, and businesses.",
   },
   {
-    icon: Shield,
-    title: "Cloud Solutions",
-    slug: "cloud-solutions",
-    description: "Secure cloud infrastructure and deployment strategies that ensure reliability and performance at scale.",
+    icon: Wifi,
+    title: "Starlink Installation",
+    slug: "starlink-installation",
+    description: "Residential and commercial Starlink setup with WiFi mesh distribution for reliable connectivity anywhere.",
   },
   {
-    icon: TrendingUp,
-    title: "Digital Strategy",
-    slug: "digital-strategy",
-    description: "Strategic consulting to help you leverage technology for maximum business impact and competitive advantage.",
+    icon: Network,
+    title: "Network & WiFi",
+    slug: "network-wifi",
+    description: "LAN/WAN setup, structured cabling, and enterprise WiFi deployment for offices of all sizes.",
   },
 ];
 
-export function Services() {
+export function Infrastructure() {
   return (
-    <section id="services" className="section-padding bg-secondary/30">
+    <section id="infrastructure" className="section-padding">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollAnimation className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-accent font-semibold text-sm uppercase tracking-wider">What We Do</span>
+          <span className="text-accent font-semibold text-sm uppercase tracking-wider">Infrastructure & IT Setup</span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6">
-            Solutions That Drive Results
+            Infrastructure & IT Setup
           </h2>
           <p className="text-lg text-muted-foreground">
-            We combine technical excellence with business acumen to deliver software that not only works flawlessly but also drives measurable growth.
+            Beyond software — we design, install, and commission the physical and network infrastructure your business runs on. From server rooms to Starlink, we handle it end to end.
           </p>
         </ScrollAnimation>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {services.map((service, index) => (
+          {infrastructure.map((service, index) => (
             <ScrollAnimation key={service.title} delay={index * 0.1} direction="up">
               <Link to={`/services/${service.slug}`} className="block h-full">
                 <div className="group bg-card rounded-2xl p-8 border border-border hover:border-accent/30 transition-all duration-300 card-hover h-full">

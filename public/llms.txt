@@ -15,6 +15,15 @@
 - [Cloud Solutions](/services/cloud-solutions): Cloud migration, IaC, Kubernetes, and CI/CD.
 - [Digital Strategy](/services/digital-strategy): Roadmaps, product strategy, and technical due diligence.
 
+## Infrastructure & IT Setup
+
+- [Server Room Setup](/services/server-room-setup): Rack, cabling, UPS, cooling, and remote monitoring.
+- [CCTV & Surveillance](/services/cctv-surveillance): IP camera installation and remote viewing setup.
+- [Access Control](/services/access-control): Biometric, card, and PIN access systems.
+- [Computer Lab Setup](/services/computer-lab-setup): Workstation deployment, networking, and CBT setup.
+- [Starlink Installation](/services/starlink-installation): Starlink dish install with WiFi mesh distribution.
+- [Network & WiFi](/services/network-wifi): LAN/WAN and enterprise WiFi for offices.
+
 ## Blog
 
 - [Best Software Development Companies in Nigeria (2026)](/blog/Best%20Software%20Development%20Companies%20in%20Nigeria%20%282026%29): Industry roundup of top Nigerian software firms.

@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Check, ArrowRight } from "lucide-react";
-import { Globe, Smartphone, Code, Zap, Shield, TrendingUp } from "lucide-react";
+import { Globe, Smartphone, Code, Zap, Shield, TrendingUp, Server, Camera, Lock, Monitor, Wifi, Network } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -180,6 +180,126 @@ const servicesData = {
         title: "Faster Results",
         description: "Focus on high-impact initiatives that deliver quick wins.",
       },
+    ],
+  },
+  "server-room-setup": {
+    icon: Server,
+    title: "Server Room Setup",
+    subtitle: "Rack, power, cooling, and monitoring done right",
+    description: "We design, build, and commission production-grade server rooms for businesses and enterprises. From rack installation and structured cabling to UPS, cooling, and remote monitoring — we deliver an environment your critical workloads can run on 24/7.",
+    features: [
+      "Rack and enclosure installation",
+      "Structured cabling (Cat6/Cat6a, fiber)",
+      "UPS sizing, installation, and battery management",
+      "Precision cooling and airflow planning",
+      "Remote monitoring and alerting",
+      "Cable management, labelling, and documentation",
+    ],
+    technologies: ["APC UPS", "Cisco", "Ubiquiti", "Cat6a", "Fiber Optic", "Zabbix"],
+    benefits: [
+      { title: "Built for Uptime", description: "Redundant power, cooling, and connectivity so your business never stops." },
+      { title: "On-Premise Control", description: "Keep sensitive workloads and data in-house with full physical control." },
+      { title: "Scalable Design", description: "Racks and cabling planned for future expansion without rework." },
+    ],
+  },
+  "cctv-surveillance": {
+    icon: Camera,
+    title: "CCTV & Surveillance",
+    subtitle: "IP camera systems with full coverage and remote viewing",
+    description: "We design and install professional IP-based CCTV systems for offices, residences, schools, and commercial properties. Full-coverage layouts, NVR setup, and mobile remote viewing — engineered for clarity day and night.",
+    features: [
+      "Site survey and coverage planning",
+      "IP camera installation (indoor/outdoor)",
+      "NVR/DVR setup with redundant storage",
+      "Remote mobile and web viewing",
+      "Night vision and low-light optimization",
+      "Maintenance and support",
+    ],
+    technologies: ["Hikvision", "Dahua", "Axis", "IP/PoE", "NVR", "ONVIF"],
+    benefits: [
+      { title: "Full Coverage", description: "Strategic camera placement leaves no blind spots." },
+      { title: "Remote Monitoring", description: "View live and recorded footage from anywhere on your phone." },
+      { title: "Evidence-Grade Quality", description: "HD/4K footage that holds up when it matters most." },
+    ],
+  },
+  "access-control": {
+    icon: Lock,
+    title: "Access Control Systems",
+    subtitle: "Biometric, card, and PIN-based entry management",
+    description: "Secure your facility and manage staff movement with modern access control. We install biometric, card-based, and PIN systems integrated with your doors, turnstiles, and time-attendance workflows.",
+    features: [
+      "Fingerprint and facial biometric readers",
+      "RFID card and key fob systems",
+      "PIN-based keypad entry",
+      "Magnetic locks and electric strike installation",
+      "Time and attendance integration",
+      "Multi-door centralized management",
+    ],
+    technologies: ["ZKTeco", "Hikvision Access", "Suprema", "RFID", "Wiegand", "TCP/IP"],
+    benefits: [
+      { title: "Granular Control", description: "Decide who goes where and when, down to the individual." },
+      { title: "Audit Trail", description: "Complete log of every entry and exit for compliance and security." },
+      { title: "No More Keys", description: "Eliminate lost-key risks and rekeying costs forever." },
+    ],
+  },
+  "computer-lab-setup": {
+    icon: Monitor,
+    title: "Computer Lab Setup",
+    subtitle: "Turnkey labs for schools, CBT centers, and businesses",
+    description: "End-to-end computer lab deployments — from workstation procurement guidance to LAN cabling, software imaging, and CBT platform configuration. We hand over labs that are ready for exams, training, or daily operations on day one.",
+    features: [
+      "Workstation procurement guidance",
+      "LAN cabling and network configuration",
+      "OS and software imaging across all seats",
+      "CBT platform setup and testing",
+      "User account and permission management",
+      "Training and ongoing support",
+    ],
+    technologies: ["Windows", "Ubuntu", "Active Directory", "CBT Software", "Cat6", "Network Switches"],
+    benefits: [
+      { title: "Exam-Ready", description: "Labs configured and tested for CBT, WAEC, JAMB, and internal assessments." },
+      { title: "Centrally Managed", description: "Push updates and policies across every workstation from one console." },
+      { title: "Built to Last", description: "Quality cabling, surge protection, and standards that survive heavy daily use." },
+    ],
+  },
+  "starlink-installation": {
+    icon: Wifi,
+    title: "Starlink Installation",
+    subtitle: "High-speed satellite internet with mesh WiFi distribution",
+    description: "Residential and commercial Starlink installations across Nigeria. We handle the dish mounting, alignment, router configuration, and full WiFi mesh distribution so every room and outdoor area gets fast, stable internet.",
+    features: [
+      "Starlink dish mounting and alignment",
+      "Cable routing and weatherproofing",
+      "Router and network configuration",
+      "WiFi mesh deployment (whole-home/office)",
+      "Speed and coverage testing",
+      "Ongoing support and troubleshooting",
+    ],
+    technologies: ["Starlink", "TP-Link Deco", "Ubiquiti UniFi", "Mesh WiFi", "PoE", "Cat6"],
+    benefits: [
+      { title: "Fast & Reliable", description: "150+ Mbps speeds even in areas with poor fiber coverage." },
+      { title: "Full Coverage", description: "Mesh WiFi ensures every room and outdoor space stays connected." },
+      { title: "Professional Install", description: "Proper alignment, weatherproofing, and cable management that lasts." },
+    ],
+  },
+  "network-wifi": {
+    icon: Network,
+    title: "Network & WiFi",
+    subtitle: "LAN/WAN and enterprise WiFi for offices of all sizes",
+    description: "We design and deploy reliable office networks — from structured cabling and switches to enterprise WiFi with seamless roaming. Whether you're a 10-person startup or a multi-floor company, we build networks that just work.",
+    features: [
+      "LAN and WAN design and deployment",
+      "Structured cabling (Cat6/Cat6a/fiber)",
+      "Enterprise WiFi with seamless roaming",
+      "Managed switches and VLAN configuration",
+      "Guest network and access control",
+      "Network monitoring and support",
+    ],
+    technologies: ["Ubiquiti UniFi", "MikroTik", "Cisco", "TP-Link Omada", "Cat6a", "Fiber"],
+    benefits: [
+      { title: "Rock-Solid Reliability", description: "Engineered for uptime with redundancy where it counts." },
+      { title: "Scales With You", description: "Add users, devices, and floors without ripping out infrastructure." },
+      { title: "Centrally Managed", description: "One dashboard to monitor and configure your entire network." },
     ],
   },
 };
