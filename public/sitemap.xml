@@ -36,6 +36,36 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.quantivek.com/services/server-room-setup</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.quantivek.com/services/cctv-surveillance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.quantivek.com/services/access-control</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.quantivek.com/services/computer-lab-setup</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.quantivek.com/services/starlink-installation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.quantivek.com/services/network-wifi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.quantivek.com/blog/Best%20Software%20Development%20Companies%20in%20Nigeria%20(2026)</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
