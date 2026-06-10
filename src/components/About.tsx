@@ -22,7 +22,7 @@ export function About() {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Quantivek Global is a forward-thinking technology agency dedicated to helping startups, SMEs, schools, and enterprises achieve their digital and infrastructure ambitions. We specialize in custom software development, SaaS products, and full IT infrastructure setup — from server rooms and computer labs to CCTV, access control, and Starlink installation.
+                Quantivek Global is a forward-thinking technology company dedicated to helping startups, SMEs, schools, and enterprises achieve their digital and infrastructure ambitions. We specialize in custom software development, SaaS products, and full IT infrastructure setup — from server rooms and computer labs to CCTV, access control, and Starlink installation.
               </p>
               <p>
                 From concept to completion, we deliver technology that works in the real world.
